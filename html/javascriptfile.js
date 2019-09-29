@@ -16,26 +16,33 @@ var width = screen.width,
   requestAnimFrame(loop);
   checkScreenSize();
 })();
+function mobileRender(){
+	$('#menulabel').removeClass().addClass('menuactive')
+	$('#search').removeClass().addClass('search-collapsed');
+	$('#search').attr('placeholder',' ');
+	$('#weblogo').css({'marginLeft':'0%','height':'5%'});
+	$('.topnavigation').css({'height':'100px'});
+	$('#togglebutton').css({'backgroundColor':'#ff7f27'});
+	$('#menulabel').css({'fontSize':'large','fontWeight':'bold'});
+	$('.contact').css({'margin':'0px 0px 0px 0px','max-width': '100%','height': 'auto','border-bottom':'1px solid black'});
+	$('.info').css({'margin':'0px 0px 0px 0px','max-width': '100%','height': 'auto','border-bottom':'1px solid black'})
+	
+}
+
+function desktopRender(){
+	 $('#search').removeClass().addClass('search-input');
+	 $('#search').attr('placeholder','Search entire store here... ');
+	 $('#menulabel').removeClass().addClass('disabledmenulabel'); 
+	 $('.contact').css({'border':'none'});
+	 $('.info').css({'border':'none'});
+	
+}
+$(document).ready(function(){
+	(window.width<768)? mobileRender():desktopRender();
+});
 
 $(window).bind('resolutionchange', function(){
     
-	if(window.width<768){
-		$('#menulabel').removeClass().addClass('menuactive')
-		$('#search').removeClass().addClass('search-collapsed');
-		$('#search').attr('placeholder',' ');
-		$('#weblogo').css({'marginLeft':'0%','height':'5%'});
-		$('.topnavigation').css({'height':'100px'});
-		$('#togglebutton').css({'backgroundColor':'#ff7f27'});
-		$('#menulabel').css({'fontSize':'large','fontWeight':'bold'});
-		$('.contact').css({'margin':'0px 0px 0px 0px','max-width': '100%','height': 'auto','border-bottom':'1px solid black'});
-		$('.info').css({'margin':'0px 0px 0px 0px','max-width': '100%','height': 'auto','border-bottom':'1px solid black'})
+	(window.width<768)? mobileRender():desktopRender();
 		
-	}else{
-		 $('#search').removeClass().addClass('search-input');
-		 $('#search').attr('placeholder','Search entire store here... ');
-		 $('#menulabel').removeClass().addClass('disabledmenulabel');
-		 $('.contact').css({'border':'none'});
-		 $('.info').css({'border':'none'});
-	}
-	
 });
