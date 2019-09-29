@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--
+This coding test is provided as part of the interview process for a role advertised by PureNet & Magium
+
+This test should be conducted in the following conditions:
+ - You may have access to Google or any internet site providing assistance (to simulate office connectivity)
+ - In conditions where your concentration can be maximised
+
+Task
+ You have HTML, 2 designs of the same page presented at different widths, and a number of images provided.
+ Style the page to match the designs.
+
+Things to consider:
+ - This test is intended to take around 1 hour but spend as long as you feel is appropriate
+ - Extra images are in the img folder where needed to achieve the designs
+ - Make sure your styling matches the designs provided (at the 2 different widths)
+ - The page must be responsive and work at different widths
+ - Consider the browser you are targeting for compatibility. State the browser & version that you expect it to work in
+ - Add CSS IDs and classes as you believe are required
+ - Consider best practice SEO and add to the existing HTML as you see fit
+ - It is fine to add jQuery and create effects/animations if desired
+ - You can hide the second level nav, or have them appear via CSS or JavaScript, it's up to you
+ - Consider the structure of your CSS and the neatness of your code
+ - Remember that if the HTML doesn't achieve the design, change it, your final page must match the look of the design
+
+Once completed please send your completed work in a ZIP file to the email address from which you received the communication.
+-->
+<html lang="en-GB">
+    <head>
+	    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width"/> 
+		
+        <title>Claude Rukamiza Frontend Coding Test</title>
+		
+		<!--Bootstrap CDN css-->
+		<link
+         rel="stylesheet"
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+         crossorigin="anonymous">
+	    <!-- icon library -->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+        
+		<!-- costumised font stylesheet-->
+	    <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+	<header>
+	    <!--top navigation-->
+		<nav class="navbar navbar-default topnavigation">
+	        <div class="navbar-header">
+              <img id="weblogo" class= "img-responsive logo"  src="img/logo.svg" alt="">
+		    </div>
+		    <input class="nav navbar-nav navbar-right form-control search-input"id="search" type="text" name="search-textbox" value="" placeholder="Search entire store here..." maxlength="250" autocomplete="off">
+	   </nav>
+	   <!--Main navigation-->
+	    <nav style="background-color:#F0F0F0"class="navbar navbar-expand-md " id="main-navbar">
+	        <div class= "disabledmenulabel" id="menulabel">Menu</div>
+	        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation" id="togglebutton">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+	    	<div class="collapse navbar-collapse" id="main-navigation">
+	            <ul class="navbar-nav">
+		 	        <li class="nav-item active"  ><a class="nav-link" href="#" >Home <span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item" ><a class="nav-link"  href="#">Products</a></li>
+                    <li class="nav-item" ><a class="nav-link"  href="#">Store Locations</a></li>
+			       <li class="nav-item" ><a class="nav-link"  href="#">About Us</a></li>
+		        </ul>
+		   </div>       
+       </nav>
+	
+	</header>
+	<body>
+	<!--main text content-->
+	<div style="background-color: #fff" class="jumbotron jumbotron-fluid">
+	     <div class="container maintext">
+               <h1 style="color:#ff7f27;font-weight: normal">Frontend Coding Test</h1>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+			      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+				  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+				  fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+				  mollit anim id est laborum.</p>
+               <p style="font-size:small; font-family: Arial, Helvetica, sans-serif">Et tortor at risus viverra. Turpis egestas pretium aenean pharetra. Amet nulla facilisi morbi tempus. 
+			      Volutpat commodo sed egestas egestas fringilla phasellus. Felis donec et odio pellentesque diam. Aliquam 
+				  etiam erat velit scelerisque in dictum. </p>
+           </div>
+     </div>
+	 <!--set of images-->
+	    <div class="container  imagegallery" >
+	          <div class="row imagerow ">
+                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 ">
+			        <div  class="img-wrapper" id="women-shirts">
+			            <img style="max-width: 100%;height: auto"class= "img-responsive" src="img/womens-t-shirts.png" alt="womens shirts"  />
+				    </div>
+				 </div>
+                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+			        <div class="img-wrapper" id="women-pants">
+			             <img style="max-width: 100%;height: auto" class= "img-responsive" src="img/womens-pants.jpg" alt="womens pants"  />
+			        </div>
+			    </div>
+			 </div>
+			  
+			  <div class="row imagerow">
+			     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+				      <div class="img-wrapper " id="erin">
+				        <img style="max-width: 100%;height: auto" class= "img-responsive" src="img/womens-erin.jpg" alt="womens erin" />
+					  </div>
+				  </div>
+				  
+		      </div>
+			  <div class="row imagerow">
+			      
+		          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" >
+				      <div class="img-wrapper " id="category-pants">
+				          <img style="max-width: 100%;height: auto"class= "img-responsive" src="img/womens-category-pants.jpg" alt="pants category" />
+					  </div>
+				  </div>
+			      <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+				      <div class="img-wrapper" id="category-shorts">
+					      <img style="max-width: 100%;height: auto" class= "img-responsive" src="img/womens-category-shorts.jpg" alt="shorts category" />
+					  </div>
+				  </div>
+			      <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+				       <div class="img-wrapper" id="category-tanks">
+					        <img  style="max-width: 100%;height: auto"  class= "img-responsive" src="img/womens-category-tanks.jpg" alt="tanks category" />
+						</div>
+				 </div>
+		     </div>
+	    </div>
+		
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<!--custumise javascript file-->
+	<script src= "javascriptfile.js"></script>
+	</body>
+	
+	 <footer  >
+        <!--top footer container-->
+        <div class="jumbotron" style="background-color: #F0F0F0;margin-bottom:0;padding:0">
+            <div style="max-width=100%;padding=0" class="row ">
+                <div style="max-width=100%;padding=0"class="col-lg-6 col-md-12 col-sm-12 col-xs-12  ">
+                    
+                    <!--<div id="contact-wrapper"class="py-0">-->
+                       <a  class= "row footer-item contact "href="#">Contact us</a>
+                       <a class= "row  footer-item contact" href="#">Who We Are</a>
+                       <a class= "row footer-item contact" href="#">Blog</a>
+                       <a style="margin-top:50px"class= "row  footer-item contact" href="#">Terms & Conditions</a>
+                   <!--</div>-->
+                </div>
+                
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12  ">
+                    <!--<div class="py-2 my-4">-->
+                           <a  class= "row footer-item info" href="#">Newsletter</a>
+                           <a  class= "row footer-item info" href="#">Privacy Policy</a>
+                           <a  class= "row footer-item info" href="#">Competitions</a>
+                           <a  class= "row footer-item info" href="#">Refer A Friend Scheme</a>
+                    <!--</div>-->  
+                </div>
+                
+            </div> 
+		</div>
+		<!--social media footer-->
+		<div style="background-color:#6D716E; max-width:100%;margin:0px"class="container social-media">
+		        <div class="row justify-content-center socialmedia-icon">
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/home"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+           
+		       </div>
+		</div>
+     </footer>
+	
+</html>
