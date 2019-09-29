@@ -1,0 +1,88 @@
+html,body{
+	margin:0%;
+	padding: 0%;
+	
+}
+/*styling the top a navigation*/
+
+.navbar{
+    background-color: transparent;
+    position: relative;
+    z-index: 4;
+	
+}
+
+.navbar-collapse{
+	margin-left: 10%;
+}
+.logo{
+	margin-left:80%;
+	
+}
+.search-input{
+	background:url('../img/search-icon.svg') no-repeat right;
+	height:40px;
+	width:200px;
+	margin-right: 10%;
+	
+	
+}
+.search-collapsed{
+    background:url('../img/search-icon.svg') no-repeat right;
+	height:40px;
+	width:40px;
+	
+}
+/*styling second navigation*/
+.nav-link{
+    font-size: 20px;
+	color: black;
+	
+	
+}
+.navbar-nav > li:not(.active){
+	margin-left:60px;
+}
+
+.menuactive{
+	 display:inline-block;
+	 width:100px;
+	 height:40px;
+	 padding:5px;
+ }
+ 
+ .disabledmenulabel{
+	 display:none;
+ }
+ /* styling images & footer*/
+ .imagerow{
+	 margin-bottom:20px;
+ }
+ .img-wrapper{
+	margin-bottom:10px; 
+ }
+ .footer-item{
+	 color:black;
+	
+  }
+  .contact{
+	 margin-left:20%;  
+  }
+  .info{
+	margin-left:60%;
+    	
+  }
+  
+ .row .col{
+	 margin:0%;
+	 padding:0%;
+ }
+ 
+ .fa{
+	color:white;
+	padding-right:20px;
+	
+}
+.socialmedia-icon{
+	height:60px;
+}
