@@ -33,8 +33,8 @@ function desktopRender(){
 	 $('#search').removeClass().addClass('search-input');
 	 $('#search').attr('placeholder','Search entire store here... ');
 	 $('#menulabel').removeClass().addClass('disabledmenulabel'); 
-	 $('.contact').css({'border':'none'});
-	 $('.info').css({'border':'none'});
+	 $('.contact').css({'border':'none','marginLeft':'20%'});
+	 $('.info').css({'border':'none','marginLeft':'60%'});
 	
 }
 $(document).ready(function(){
